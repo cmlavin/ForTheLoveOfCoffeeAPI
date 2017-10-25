@@ -2,6 +2,7 @@ class Api::V1::ReviewsController < ApplicationController
 
   def index
     @reviews = Review.all
+    render json: @reviews
   end
 
   def new
@@ -10,7 +11,11 @@ class Api::V1::ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.save
+    if @review.save
+      render json: @review
+    else
+      render json: { message: "Review not created." }
+    end
   end
 
   def show
