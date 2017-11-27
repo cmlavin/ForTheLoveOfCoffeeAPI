@@ -10,6 +10,7 @@ class Api::V1::ReviewsController < ApplicationController
   end
 
   def create
+    #review.user_id = user.id
     @review = Review.new(review_params)
     if @review.save
       render json: @review

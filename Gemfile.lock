@@ -45,6 +45,8 @@ GEM
     concurrent-ruby (1.0.5)
     crass (1.0.2)
     erubi (1.7.0)
+    faker (1.6.1)
+      i18n (~> 0.5)
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -127,6 +129,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
+  faker
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
   puma (~> 3.7)
@@ -137,4 +140,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.16.0.pre.2
+   1.16.0.pre.3
